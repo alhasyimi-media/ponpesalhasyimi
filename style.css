@@ -1,0 +1,286 @@
+/* ====== DASAR UMUM ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #027179;
+}
+
+/* Container untuk membatasi lebar */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ====== HEADER: LOGO + SEARCH ====== */
+
+header {
+  margin-bottom: 20px;
+}
+
+/* Bar 1: Logo di kiri, search di kanan */
+.top-bar {
+  background-color: #027179;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* Kotak logo sesuai sketsa */
+.logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;      /* boleh diubah sesuai selera */
+  margin-left: 50px;
+}
+
+/* Atur ukuran logo.png */
+.logo-box img {
+  height: 50px;        /* sesuaikan: 40 / 50 / 60 px */
+  width: auto;
+  display: block;
+}
+
+/* Search bar di kanan */
+.search-form {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.search-form input[type="text"] {
+  padding: 8px 10px;
+  min-width: 180px;
+  border: 1px solid #555;
+  border-radius: 0;
+}
+
+.search-form button {
+  padding: 8px 14px;
+  border: 1px solid #555;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.search-form button:hover {
+  background-color: #0b5b3b;
+  color: #ffffff;
+}
+
+/* ====== NAVBAR (Bar 2) ====== */
+
+.main-nav {
+  background-color: #027179;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.main-nav .container {
+  padding: 8px 0;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid #d0ff00;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.main-nav a:hover {
+  background-color: #a83507;
+  color: #ffffff;
+}
+
+/* ====== BAR 3: STRIP INFO TIPIS ====== */
+
+.info-strip {
+  background-color: #ffee00;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.info-strip .container {
+  padding: 4px 0;
+}
+
+.info-strip p {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #aa0000;
+}
+
+/* ====== BAR 4: SELAMAT DATANG ====== */
+
+.welcome-bar {
+  background-color: #027179;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.welcome-bar .container {
+  padding: 10px 0;
+}
+
+.welcome-bar h1 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ====== MAIN LAYOUT (2 KOLOM) ====== */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;  /* kiri lebih lebar dari kanan */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Kartu umum */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 16px;
+}
+
+/* Kotak FOTO */
+.photo-card {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.photo-card p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Card Update Berita */
+.news-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.news-card ul {
+  list-style: disc;
+  padding-left: 18px;
+}
+
+/* Kolom kanan */
+.main-right .card {
+  margin-bottom: 14px;
+}
+
+/* Kotak Logo Utama */
+.big-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 40px;
+  max-width: 320px;   /* lebar card logo */
+  margin: 0 auto;     /* supaya card-nya di tengah kolom */
+}
+
+/* Atur ukuran logo utama */
+.big-logo-img {
+  max-width: 100%;   /* tidak melebihi kotaknya */
+  height: auto;
+  display: block;
+}
+
+.visi-misi-card {
+  background-color: #027179;
+  border-color: #027179;
+  padding: 1px;
+  text-align: center;
+}
+
+.visi-misi-card h2 {
+  margin-bottom: 8px;
+  color: #0b5b3b;
+  margin-bottom: 2px;
+}
+
+.visi-misi-card p {
+  color: #ffffff;
+  margin-top: 0;
+  line-height: 20px;
+}
+
+.misi-card ul {
+  list-style: disc;
+  padding-left: 18px;
+}
+
+/* Warna teks isi */
+.visi-misi-card h2 {
+  color: #ffffff;
+}
+
+/* ====== FOOTER ====== */
+
+footer {
+  margin-top: 30px;
+  background-color: #027179;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.85rem;
+}
+
+/* ====== RESPONSIVE (HP / TABLET) ====== */
+
+@media (max-width: 768px) {
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-form input[type="text"] {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .main-layout {
+    grid-template-columns: 1fr;   /* kolom jadi tumpuk */
+  }
+
+  .photo-card,
+  .big-logo-card {
+    min-height: 180px;
+  }
+}
